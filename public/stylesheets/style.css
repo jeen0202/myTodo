@@ -1,8 +1,92 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color:#908f9c;
+  text-align: center;
+}
+a {
+  color: #046c96;
 }
 
-a {
-  color: #00B7FF;
+h1{
+  text-align: center;
+  color: white;
+}
+
+.index{  
+  margin-bottom: auto; 
+  }
+.iText{
+  color: white;
+}
+
+.loginForm {
+  position:absolute;
+  width:300px;
+  height:400px;
+  padding: 30px, 20px;
+  background-color:white;
+  text-align:center;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  border-radius: 15px;
+}
+
+.loginForm h2{
+  text-align: center;
+  margin: 30px;
+  color: black;
+}
+
+.idForm{
+  border-bottom: 2px solid #adadad;
+  margin: 30px;
+  padding: 10px 10px;
+}
+
+.passForm{
+  border-bottom: 2px solid #adadad;
+  margin: 30px;
+  padding: 10px 10px;
+}
+
+.id {
+  width: 100%;
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:16px;
+  height:25px;
+  background: none;
+}
+
+.pw {
+  width: 100%;
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:16px;
+  height:25px;
+  background: none;
+}
+.input{
+  width:40%;
+  height:20px;
+  font-size : 15px;
+}
+
+.button {  
+  margin-bottom: 40px;
+  width:41%;
+  height:40px;
+  background: linear-gradient(125deg,#e9eeee,#6d6a8d,#757777);
+  background-position: left;
+  background-size: 200%;
+  color:white;
+  font-weight: bold;
+  border:none;
+  cursor:pointer;
+  transition: 0.4s;
+  display:inline;
 }

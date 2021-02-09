@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    
+    form(action='/auth/login_process', method='post')
+        h1 Login
+        p
+            input(type='text', name='email', class= 'input' placeholder='email')
+        p
+            input(type='password', name='password',class = 'input', placeholder='password')
+        p
+            input(type='submit', value='login', class='button') 
+        div
+            | Don&apos;t you have ID? 
+            a(href='register') sign up  

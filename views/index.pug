@@ -1,5 +1,10 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  body(class='index')
+    h1= title
+    p(class='iText') Welcome to #{title}
+    a(href='/auth/login') login
+    |
+    |
+    a(href='/auth/register') register
