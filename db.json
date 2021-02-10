@@ -1,11 +1,4 @@
 {
-  "users": [
-    {
-      "id": "LehsnRk7xGwyFNcW1ssHY",
-      "email": "jeen0202@korea.ac.kr",
-      "password": "$2b$10$wbgyKFP7WEwNq7v8G5l3HO.AMwqiv1fgYKxYAI/rMvHdYO2SC6ppi",
-      "displayName": "jeen0202"
-    }
-  ],
+  "users": [],
   "todolists": []
 }

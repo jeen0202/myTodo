@@ -11,8 +11,9 @@ router.get('/', function(req, res, next) {
     displayName = req.user.displayName;
   }else{
     authstatus = false;
-  }  
-  res.render('index', { title: 'My Todo',authstatus:authstatus, message: displayName});
+  }
+  console.log(req.toDolists);  
+  res.render('index', { title: 'My TODO',authstatus:authstatus, displayName: displayName, toDolists:req.toDolists});
 });
 
 module.exports = router;

@@ -36,6 +36,7 @@ app.use(session({
 //app.use(flash());
 var passport = require('./lib/passport')(app);
 
+app.get('*',readlow.todolists);
 app.use('/', indexRouter);
 app.use('/auth', authRouter(passport));
 

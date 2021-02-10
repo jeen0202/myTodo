@@ -5,9 +5,6 @@ const express = require('express')
 var router = express.Router();
 
 module.exports = function(passport){
-router.get('/',(req,res,next)=>{
-    res.send('auth page');
-})
 
 router.get('/login', (req,res,next)=>{
     res.render('login');

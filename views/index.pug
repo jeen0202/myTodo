@@ -3,10 +3,18 @@ extends layout
 block content 
   body(class='index')
     h1= title    
-    p(class='iText') Welcome to #{title}    
+    div(class='iText') Welcome to #{title}    
   case authstatus
     when true     
-      p(class='iText') #{message}
+      div(class='iText') #{displayName}
+      form(action='todo_add' method= 'post')
+        p
+          label(for='content', class = 'iText') ADD TODO :
+          input(type='text' name ='content')
+          input(type='submit' value = 'ADD')
+      p         
+        each i in toDolists
+          p(class='iText') #{i.title}
       a(href='auth/logout_process') logout
     default
       p
