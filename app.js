@@ -5,21 +5,21 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 //var flash = require('connect-flash');
+var app = express();
 
 const readlow = require('./lib/readlow');
 
 var indexRouter = require('./routes/index');
 var authRouter = require('./routes/auth');
+
 var session = require('express-session');
 var FileStore = require('session-file-store')(session);
 
-var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-var passport = require('./lib/passport')(app);
 app.get('*',readlow.todolists);
 app.use(logger('dev'));
 app.use(express.json());
@@ -30,9 +30,11 @@ app.use(session({
   secret: 'holly molly',
   resave: false,
   saveUninitialized: false,
-  store : new FileStore()
+  store : new FileStore(),
+  secure:false
 }));   
 //app.use(flash());
+var passport = require('./lib/passport')(app);
 
 app.use('/', indexRouter);
 app.use('/auth', authRouter(passport));

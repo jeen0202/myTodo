@@ -9,7 +9,11 @@ block content
         p
             input(type='password', name='password',class = 'input', placeholder='password')
         p
-            input(type='submit', value='login', class='button') 
-        div
+            input(type='submit', value='login', class='button')         
+        p
+            button(href = 'auth/google', class = 'button') Google로 로그인
+        p           
+            button(href = 'auth/kakao', class = 'button') Kakao로 로그인
+        div     
             | Don&apos;t you have ID? 
-            a(href='register') sign up  
+            a(href='register') sign up

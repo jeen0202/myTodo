@@ -1,7 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color:#908f9c;
+  background-color:#aea6f0;
   text-align: center;
 }
 a {
@@ -76,8 +76,7 @@ h1{
   font-size : 15px;
 }
 
-.button {  
-  margin-bottom: 40px;
+.button {    
   width:41%;
   height:40px;
   background: linear-gradient(125deg,#e9eeee,#6d6a8d,#757777);

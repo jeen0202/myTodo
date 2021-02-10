@@ -1,10 +1,17 @@
 extends layout
 
-block content
+block content 
   body(class='index')
-    h1= title
-    p(class='iText') Welcome to #{title}
-    a(href='/auth/login') login
-    |
-    |
-    a(href='/auth/register') register
+    h1= title    
+    p(class='iText') Welcome to #{title}    
+  case authstatus
+    when true     
+      p(class='iText') #{message}
+      a(href='auth/logout_process') logout
+    default
+      p
+        a(href='/auth/login') login
+        |
+        | 
+        a(href='/auth/register') register
+   

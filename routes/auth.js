@@ -12,6 +12,7 @@ router.get('/',(req,res,next)=>{
 router.get('/login', (req,res,next)=>{
     res.render('login');
 });;
+
 router.post('/login_process',passport.authenticate('local',
         {failureRedirect : '/auth/login'}),
         (req, res) => {
@@ -23,6 +24,7 @@ router.post('/login_process',passport.authenticate('local',
 router.get('/register', (req,res,next)=>{
     res.render('register');
 });
+
 router.post('/register_process',(req,res)=>{     
     var post = req.body;
     var email = post.email;  
@@ -54,6 +56,17 @@ router.post('/register_process',(req,res)=>{
         });
     }          
 });
+
+router.get('/logout_process',(req,res)=>{ 
+    req.logout();  
+    // session을 지우는 코드   
+    // request.session.destroy((err)=>{  
+    //  })
+    req.session.save(()=>{
+      res.redirect('/');
+    });
+});
+
 return router;
 }
 
