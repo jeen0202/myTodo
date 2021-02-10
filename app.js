@@ -11,8 +11,10 @@ const readlow = require('./lib/readlow');
 
 var indexRouter = require('./routes/index');
 var authRouter = require('./routes/auth');
+var todoRouter = require('./routes/todo')
 
 var session = require('express-session');
+const todo = require('./routes/todo');
 var FileStore = require('session-file-store')(session);
 
 
@@ -20,7 +22,6 @@ var FileStore = require('session-file-store')(session);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-app.get('*',readlow.todolists);
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -39,6 +40,7 @@ var passport = require('./lib/passport')(app);
 app.get('*',readlow.todolists);
 app.use('/', indexRouter);
 app.use('/auth', authRouter(passport));
+app.use('/todo',todoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
