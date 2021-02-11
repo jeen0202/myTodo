@@ -11,7 +11,7 @@ router.get('/',(req,res,next)=>{
     
 router.post('/add_list',(req,res)=>{
     var today = new Date();
-    var day = today.toLocaleDateString('ko-KR');
+    var day = today.toLocaleTimeString('ko-KR',{hour: '2-digit', minute: '2-digit' });
     var post = req.body;        
     var content = post.content;
     db.get('todolists').push({
