@@ -11,9 +11,15 @@ block content
           label(for='content', class = 'iText') ADD TODO :
           input(type='text', name ='content')
           input(type='submit' value = 'ADD')
-      p         
-        each i in toDolists
-          p(class='iText') #{i.content}
+      table(class='index')         
+        each i in toDolists         
+          tr
+            td(class='list') #{i.content}
+            td(class='listDate') #{i.date}          
+            td
+              form(action="/todo/delete_list", method="post",class='iText')
+                input(type="hidden", name ="id" value=`${i.id}`)
+                input(type="submit", value = "delete")
       a(href='auth/logout_process') logout
     default
       div(class='iText') Welcome to #{title}

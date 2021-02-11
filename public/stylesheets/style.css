@@ -12,14 +12,26 @@ h1{
   text-align: center;
   color: white;
 }
-
+table{
+  text-align:center;
+  margin-left:40%;
+}
 .index{  
   margin-bottom: auto; 
   }
 .iText{
   color: white;
 }
-
+.list{
+  margin-left:30%;  
+  color: white;  
+  text-align: start;
+}
+.listDate{
+  padding-left :5%;
+  color: white;
+  text-align:end;
+}
 .loginForm {
   position:absolute;
   width:300px;
