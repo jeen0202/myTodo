@@ -14,7 +14,8 @@ block content
       table(class='index')         
         each i in toDolists               
             tr         
-              td(class='list') #{i}          
+              td(class='list') #{i.content}
+              td(class='list') #{i.date}         
               td
                 form(action="/todo/delete_list", method="post",class='iText')
                   input(type="hidden", name ="id" value=`${i.id}`)

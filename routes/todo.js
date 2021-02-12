@@ -20,7 +20,7 @@ router.post('/add_list',(req,res)=>{
         user_id : req.user.id,
         date : day
     }).write();
-    res.redirect('/');
+    res.redirect(`/${req.user.id}`);
 });
 
 router.post('/delete_list', (req,res)=>{
