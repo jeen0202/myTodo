@@ -7,5 +7,18 @@
       "displayName": "jeen0202"
     }
   ],
-  "todolists": []
+  "todolists": [
+    {
+      "id": "OJAfmLNgUTq78rWTJ2eck",
+      "content": "나갈 준비하기",
+      "user_id": "yw-_CykZKuAtgcS4v74gd",
+      "date": "오후 06:11"
+    },
+    {
+      "id": "AuAfmLNgUTq78rWTJ2eck",
+      "content": "식사",
+      "user_id": "yw-_CykZKuAtgcS4v74gd",
+      "date": "오후 06:13"
+    }
+  ]
 }

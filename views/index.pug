@@ -12,14 +12,14 @@ block content
           input(type='text', name ='content')
           input(type='submit' value = 'ADD')
       table(class='index')         
-        each i in toDolists         
-          tr
-            td(class='list') #{i.content}
-            td(class='listDate') #{i.date}          
-            td
-              form(action="/todo/delete_list", method="post",class='iText')
-                input(type="hidden", name ="id" value=`${i.id}`)
-                input(type="submit", value = "delete")
+        each i in toDolists               
+            tr         
+              td(class='list') #{i}          
+              td
+                form(action="/todo/delete_list", method="post",class='iText')
+                  input(type="hidden", name ="id" value=`${i.id}`)
+                  input(type="submit", value = "delete")
+
       a(href='auth/logout_process') logout
     default
       div(class='iText') Welcome to #{title}

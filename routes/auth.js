@@ -14,7 +14,7 @@ router.post('/login_process',passport.authenticate('local',
         {failureRedirect : '/auth/login'}),
         (req, res) => {
         req.session.save( () => {
-        res.redirect('/')
+        res.redirect(`/${req.user.id}`)
         })
 });
 

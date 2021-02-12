@@ -31,7 +31,7 @@ router.post('/delete_list', (req,res)=>{
         return response.redirect('/');
     }
     db.get('todolists').remove({id:id}).write();
-    res.redirect('/');
+    res.redirect(`/${req.user.id}`);
 })
 
 module.exports = router;
