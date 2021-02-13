@@ -18,6 +18,31 @@ router.post('/login_process',passport.authenticate('local',
         })
 });
 
+router.get('/google',
+passport.authenticate('google', { 
+  scope: ['https://www.googleapis.com/auth/plus.login','email']
+}));
+
+router.get('/google/callback', 
+passport.authenticate('google', { failureRedirect: '/auth/login' }),
+function(req, res) {
+  res.redirect(`/${req.user.id}`);
+});
+
+router.get('/kakao',passport.authenticate('kakao', {
+    failureRedirect: '/auth/login',
+  }),(req,res)=>{
+    res.redirect('/');
+  }    
+)
+router.get('/kakao/callback',passport.authenticate('kakao', {
+    failureRedirect: '/auth/login',
+  }),(req,res)=>{
+    res.redirect(`/${req.user.id}`);
+  }    
+)
+
+
 router.get('/register', (req,res,next)=>{
     res.render('register');
 });

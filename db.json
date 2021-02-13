@@ -10,22 +10,12 @@
       "id": "_B-P3IvalEiW-3Qr9NACq",
       "email": "jeen0202@gmail.com",
       "password": "$2b$10$eeoToTqpkRgRkSsP8WdjaeNQ8BhPJo93tJ5wmBsK/h2/O8B73Ok72",
-      "displayName": "Sejin"
+      "displayName": "Sejin",
+      "googleId": "104000667689300660570",
+      "kakaoId": 1619173647
     }
   ],
   "todolists": [
-    {
-      "id": "NNLud_qFPXUlfc1b4IWTd",
-      "content": "나갈 준비하기",
-      "user_id": "yw-_CykZKuAtgcS4v74gd",
-      "date": "오후 07:52"
-    },
-    {
-      "id": "4nl2z6hm4_lO1u8sBYdQA",
-      "content": "행복하기",
-      "user_id": "yw-_CykZKuAtgcS4v74gd",
-      "date": "오후 07:53"
-    },
     {
       "id": "OBat40KCIR0rH65CTbvOu",
       "content": "먹을준비하기",
