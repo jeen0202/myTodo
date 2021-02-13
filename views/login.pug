@@ -10,10 +10,10 @@ block content
             input(type='password', name='password',class = 'input', placeholder='password')
         p
             input(type='submit', value='login', class='button')         
-        p
-            button(href = 'auth/google', class = 'button') Google로 로그인
-        p           
-            button(href = 'auth/kakao', class = 'button') Kakao로 로그인
-        div     
-            | Don&apos;t you have ID? 
-            a(href='register') sign up
+    form(action='/auth/google', method='get')
+        input(type='submit' class = 'button',value='Google로 로그인')
+    form(action='/auth/kakao', method='get')                       
+        input(type='submit' class = 'button',value='Kakao로 로그인')
+    div     
+        | Don&apos;t you have ID? 
+        a(href='register') sign up
