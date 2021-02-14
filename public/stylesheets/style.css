@@ -42,16 +42,14 @@ tr{
   background-color: white;
 }
 .loginForm {
-  position:absolute;
-  width:300px;
-  height:400px;
+  position:relative;
+  width:auto;
+  height :max-content;
   padding: 30px, 20px;
-  background-color:white;
-  text-align:center;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  background:linear-gradient(125deg,#59D0F7,#5BE0DD,#59F7C8);
+  text-align:center;  
   border-radius: 15px;
+  padding-bottom:5%;
 }
 
 .loginForm h2{
