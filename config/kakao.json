@@ -1,4 +1,0 @@
-{"clientID" : "a7826957e14e7a7e7ab41f695da039bc",
-  "clientSecret": "",
-  "callbackURL" : "http://localhost:3000/auth/kakao/callback"
-}
