@@ -1,7 +1,7 @@
 body {
-  padding: 50px;
+  margin:0%;  
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color:#aea6f0;
+  background:#e2e2e2;
   text-align: center;
 }
 a {
@@ -9,28 +9,37 @@ a {
 }
 
 h1{
+  margin-top: 0;
   text-align: center;
   color: white;
 }
 table{
   text-align:center;
-  margin-left:40%;
+  margin-left:35%;  
+}
+tr{
+  caret-color: #02aab0;
 }
 .index{  
-  margin-bottom: auto; 
+  margin-bottom: auto;
+  padding-bottom: 10px;  
+  background:linear-gradient(125deg,#59D0F7,#5BE0DD,#59F7C8);
+  text-decoration: white;
+  
   }
 .iText{
-  color: white;
+  color:white;
 }
 .list{
   margin-left:30%;  
-  color: white;  
+  color: black;  
   text-align: start;
 }
 .listDate{
   padding-left :5%;
   color: white;
   text-align:end;
+  background-color: white;
 }
 .loginForm {
   position:absolute;
@@ -100,4 +109,14 @@ table{
   cursor:pointer;
   transition: 0.4s;
   display:inline;
+}
+.delete{
+  display:inline;
+  float:inline-end;  
+  margin : auto;
+}
+.delete_button{
+  margin-left: 5%;
+  width: 10px;
+  height: 10px;
 }
