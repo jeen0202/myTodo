@@ -19,7 +19,7 @@ router.post('/login_process',passport.authenticate('local',
 });
 
 router.get('/google',
-passport.authenticate('google', { 
+passport.authenticate('google', {
   scope: ['https://www.googleapis.com/auth/plus.login','email']
 }));
 
@@ -80,10 +80,7 @@ router.post('/register_process',(req,res)=>{
 });
 
 router.get('/logout_process',(req,res)=>{ 
-    req.logout();  
-    // session을 지우는 코드   
-    // request.session.destroy((err)=>{  
-    //  })
+    req.logout();
     req.session.save(()=>{
       res.redirect('/');
     });

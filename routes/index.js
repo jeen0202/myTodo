@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 
 
-
 router.get('/', function(req, res, next) {
   var authstatus = false;
   var displayName = '';
@@ -10,8 +9,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/:pageId',(req,res)=>{
-  var displayName = req.user.displayName;
-  console.log("toDolists : " ,req.toDolists);
+  var displayName = req.user.displayName;  
   res.render('index',{ title: 'My TODO',authstatus:true, displayName: displayName, toDolists:req.toDolists});
 })
 
