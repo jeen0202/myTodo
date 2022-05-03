@@ -14,7 +14,7 @@ var authRouter = require('./routes/auth');
 var todoRouter = require('./routes/todo')
 
 var session = require('express-session');
-const todo = require('./routes/todo');
+//const todo = require('./routes/todo');
 var FileStore = require('session-file-store')(session);
 
 

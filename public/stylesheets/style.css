@@ -23,7 +23,7 @@ tr{
 .index{  
   margin-bottom: auto;
   padding-bottom: 10px;  
-  background:linear-gradient(125deg,#59D0F7,#5BE0DD,#59F7C8);
+  background:black;
   text-decoration: white;
   
   }
@@ -46,7 +46,7 @@ tr{
   width:auto;
   height :max-content;
   padding: 30px, 20px;
-  background:linear-gradient(125deg,#59D0F7,#5BE0DD,#59F7C8);
+  background:black;
   text-align:center;  
   border-radius: 15px;
   padding-bottom:5%;

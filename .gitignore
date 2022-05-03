@@ -3,3 +3,4 @@ sessions/
 config/google.json
 config/kakao.json
 config/facebook.json
+db.json
