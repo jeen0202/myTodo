@@ -23,8 +23,7 @@ passport.authenticate('google', {
   scope: ['https://www.googleapis.com/auth/plus.login','email']
 }));
 
-router.get('/google/callback', 
-passport.authenticate('google', { failureRedirect: '/auth/login' }),
+router.get('/google/callback', passport.authenticate('google', { failureRedirect: '/auth/login' }),
 (req, res) => {
   req.session.save( () => {
     res.redirect(`/${req.user.id}`)
@@ -37,9 +36,8 @@ router.get('/kakao',passport.authenticate('kakao', {
     res.redirect('/');
   }    
 )
-router.get('/kakao/callback',passport.authenticate('kakao', {
-    failureRedirect: '/auth/login',
-  }),(req,res)=>{
+router.get('/kakao/callback',passport.authenticate('kakao', { failureRedirect: '/auth/login', }),
+(req,res)=>{
     req.session.save( () => {
       res.redirect(`/${req.user.id}`);
     })
