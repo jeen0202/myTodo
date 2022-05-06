@@ -25,8 +25,10 @@ passport.authenticate('google', {
 
 router.get('/google/callback', 
 passport.authenticate('google', { failureRedirect: '/auth/login' }),
-function(req, res) {
-  res.redirect(`/${req.user.id}`);
+(req, res) => {
+  req.session.save( () => {
+    res.redirect(`/${req.user.id}`)
+    })
 });
 
 router.get('/kakao',passport.authenticate('kakao', {
@@ -38,7 +40,9 @@ router.get('/kakao',passport.authenticate('kakao', {
 router.get('/kakao/callback',passport.authenticate('kakao', {
     failureRedirect: '/auth/login',
   }),(req,res)=>{
-    res.redirect(`/${req.user.id}`);
+    req.session.save( () => {
+      res.redirect(`/${req.user.id}`);
+    })
   }    
 )
 

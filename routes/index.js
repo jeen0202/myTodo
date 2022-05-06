@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/:pageId',(req,res)=>{
-  var displayName = req.user.displayName;  
+  var displayName = req.user.displayName;
   res.render('index',{ title: 'My TODO',authstatus:true, displayName: displayName, toDolists:req.toDolists});
 })
 
