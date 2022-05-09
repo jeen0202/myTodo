@@ -1,8 +1,14 @@
 body {
-  margin:0%;  
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background:#e2e2e2;
   text-align: center;
+  margin: auto;
+  margin-top : 20%;
+  height:100%;
+  width:100%;
+}
+section{
+  vertical-align: middle;
 }
 a {
   color: #046c96;
@@ -43,11 +49,12 @@ tr{
 }
 .loginForm {
   position:relative;
-  width:auto;
-  height :max-content;
+  margin: auto;
+  width:500px;
+  height :auto;
   padding: 30px, 20px;
   background:black;
-  text-align:center;  
+  text-align:center;
   border-radius: 15px;
   padding-bottom:5%;
 }
