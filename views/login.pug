@@ -1,19 +1,20 @@
 extends layout
 
 block content
-    section(class="loginForm")      
-        form(action='/auth/login_process', method='post')
-            h1 Login
-            p
-                input(type='text', name='email', class= 'input' placeholder='email')
-            p
-                input(type='password', name='password',class = 'input', placeholder='password')
-            p
-                input(type='submit', value='login', class='button')         
-        form(action='/auth/google', method='get')
-            input(type='submit' class = 'button',value='Google로 로그인')
-        form(action='/auth/kakao', method='get')                       
-            input(type='submit' class = 'button',value='Kakao로 로그인')
-        div  
-            font(color="white") Don&apos;t you have ID? 
-                a(href='register') Sign Up
+    div(class="wrapper")
+        section(class="loginForm")      
+            form(action='/auth/login_process', method='post')
+                h1 Login
+                p
+                    input(type='text', name='email', class= 'input' placeholder='email')
+                p
+                    input(type='password', name='password',class = 'input', placeholder='password')
+                p
+                    input(type='submit', value='login', class='button')         
+            form(action='/auth/google', method='get')
+                input(type='submit' class = 'button',value='Google로 로그인')
+            form(action='/auth/kakao', method='get')                       
+                input(type='submit' class = 'button',value='Kakao로 로그인')
+            div  
+                font(color="white") Don&apos;t you have ID? 
+                    a(href='register') Sign Up

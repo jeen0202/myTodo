@@ -1,11 +1,10 @@
-body {
+html{
+  margin : 0 auto;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+body {
   background:#e2e2e2;
   text-align: center;
-  margin: auto;
-  margin-top : 20%;
-  height:100%;
-  width:100%;
 }
 section{
   vertical-align: middle;
@@ -29,12 +28,12 @@ tr{
 .index{  
   margin-bottom: auto;
   padding-bottom: 10px;  
-  background:black;
+  background: tomato;
   text-decoration: white;
   
   }
 .iText{
-  color:white;
+  color:black;
 }
 .list{
   margin-left:30%;  
@@ -47,13 +46,24 @@ tr{
   text-align:end;
   background-color: white;
 }
-.loginForm {
+.wrapper{
   position:relative;
-  margin: auto;
+  height:800px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center; 
+}
+.loginForm {
+
+  position:relative;
+  margin: 0 auto;
   width:500px;
   height :auto;
   padding: 30px, 20px;
-  background:black;
+  background:tomato;
   text-align:center;
   border-radius: 15px;
   padding-bottom:5%;

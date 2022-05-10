@@ -1,17 +1,18 @@
 extends layout
 
 block content
-    section(class="loginForm")
-        h1 Register    
-        form(action='/auth/register_process', method='post')
-            p
-                input(type='text', name='email', class = 'input', placeholder='email', value='')
-            p
-                input(type='password', name='password1', class = 'input', placeholder='password', value='')
-            p
-                input(type='password', name='password2', class = 'input', placeholder='password', value='')
-            p
-                input(type='test', name='displayName', class = 'input', placeholder='display name', value='')
-            p
-                input(type='submit', class='button', value='Register')    
+    div(class="wrapper")
+        section(class="loginForm")
+            h1 Register    
+            form(action='/auth/register_process', method='post')
+                p
+                    input(type='text', name='email', class = 'input', placeholder='email', value='')
+                p
+                    input(type='password', name='password1', class = 'input', placeholder='password', value='')
+                p
+                    input(type='password', name='password2', class = 'input', placeholder='password', value='')
+                p
+                    input(type='test', name='displayName', class = 'input', placeholder='display name', value='')
+                p
+                    input(type='submit', class='button', value='Register')    
         
