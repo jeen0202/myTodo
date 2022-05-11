@@ -2,37 +2,36 @@ extends layout
 
 block content 
   body
-    section(class='index')
-      h1= title
-      if authstatus      
-          div(class='iText') Welcome #{displayName}
-          form(action='/todo/add_list' method= 'post')
-            p(class='list')
-              label(for='content', class = 'iText') ADD TODO :
-              input(type='text', name ='content')
-              input(type='image',src="/images/plus_icon.png" value = 'ADD', class ="plus_button")
-      unless authstatus
-          div Welcome to #{title}
+    div(class="container")
+      section(class='index row')
+        h1= title
+        if authstatus      
+            div(class='iText') Welcome #{displayName}
+            form(action='/todo/add_list' method= 'post')
+              p(class='list')
+                label(for='content', class = 'iText') ADD TODO :
+                input(type='text', name ='content')
+                input(type='image',src="/images/plus_icon.png" value = 'ADD', class ="plus_button")
+        unless authstatus
+            div Welcome to #{title}
 
-    section(class = 'content')
-      if authstatus      
-        each i in toDolists 
-          div(class='list')           
-              span #{i.content}
-              |
-              |
-              span #{i.date}        
-              form(action="/todo/delete_list", method="post" class ='delete')
-                input(type="hidden", name ="id" value=`${i.id}`)
-                input(type="image",src="/images/x_icon.png" value = "delete" class = 'delete_button')
-        a(href='auth/logout_process') logout
-      unless authstatus
-        
-        p
-          a(href='/auth/login') login
+      section(class = 'tail')
+        if authstatus      
+          each i in toDolists 
+            div(class='list')           
+                span #{i.content}
+                |
+                |
+                span #{i.date}        
+                form(action="/todo/delete_list", method="post" class ='delete')
+                  input(type="hidden", name ="id" value=`${i.id}`)
+                  input(type="image",src="/images/x_icon.png" value = "delete" class = 'delete_button')
+          a(href='auth/logout_process') logout
+        unless authstatus
+          a(class='btn-lg btn-outline-primary col-sm-6' href='/auth/login') login
           |
           | 
-          a(href='/auth/register') register
+          a(class='btn-lg btn-outline-primary col-sm-6' href='/auth/register') register
      
        
    

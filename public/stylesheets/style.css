@@ -3,8 +3,13 @@ html{
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 body {
+  display:flex;
+  min-width: 800px;
   background:#e2e2e2;
   text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 section{
   vertical-align: middle;
@@ -26,11 +31,10 @@ tr{
   caret-color: #02aab0;
 }
 .index{  
-  margin-bottom: auto;
-  padding-bottom: 10px;  
+  /* margin-bottom: auto;
+  padding-bottom: 10px;   */
   background: tomato;
   text-decoration: white;
-  
   }
 .iText{
   color:black;
