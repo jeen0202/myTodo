@@ -61,13 +61,13 @@ tr{
   align-items: center; 
 }
 .loginForm {
-
+  border: 3px solid #f1f1f1;
   position:relative;
   margin: 0 auto;
   width:500px;
   height :auto;
   padding: 30px, 20px;
-  background:tomato;
+  
   text-align:center;
   border-radius: 15px;
   padding-bottom:5%;

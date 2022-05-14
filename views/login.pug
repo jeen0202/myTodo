@@ -2,19 +2,22 @@ extends layout
 
 block content
     div(class="wrapper")
-        section(class="loginForm container-sm")
+        section(class="loginForm container-sm mb-3")
             form(action='/auth/login_process', method='post')
                 h1 Login
-                p(class='mb-3')
-                    input(class = 'form-control' type='text', name='email', placeholder='email')
-                p(class='mb-3')
+                p(class="form-floating mb-3")
+                    input(id="floatingInput" class = 'form-control' type='email', name='email', placeholder='email')
+                    //- label(for="floatingInput") Email address
+                p(class='form-floating mb-3')
                     input(class= 'form-control' type='password', name='password', placeholder='password')
-                div(class='mb-3 d-grid gap-2')
-                    button(type='submit', value='login', class='button') Login        
-            form(action='/auth/google', method='get')
-                input(type='submit' class = 'button',value='Google로 로그인')
-            form(action='/auth/kakao', method='get')                       
-                input(type='submit' class = 'button',value='Kakao로 로그인')
-            div  
-                font(color="white") Don&apos;t you have ID? 
+                div(class='mb-3')
+                    button(type='submit', value='login', class='btn btn-block') Login        
+            div(class="row justify-content-around")
+                a(href="/auth/google")
+                    img(src="/images/btn_google_signin_dark_normal_web.png")
+                //- i(class="bi bi-google")
+                a(href="/auth/kakao")
+                    img(src="/images/kakao_login_medium_narrow.png")
+            div(class="mb-3")  
+                font(class="form-text") Don&apos;t you have ID? 
                     a(href='register') Sign Up
