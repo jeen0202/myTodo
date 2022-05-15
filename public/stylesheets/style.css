@@ -4,7 +4,7 @@ html{
 }
 body {
   display:flex;
-  min-width: 800px;
+  min-width: 600px;
   background:#e2e2e2;
   text-align: center;
   align-items: center;
@@ -64,7 +64,7 @@ tr{
   border: 3px solid #f1f1f1;
   position:relative;
   margin: 0 auto;
-  width:500px;
+  width:400px;
   height :auto;
   padding: 30px, 20px;
   
@@ -72,7 +72,6 @@ tr{
   border-radius: 15px;
   padding-bottom:5%;
 }
-
 .loginForm h2{
   text-align: center;
   margin: 30px;

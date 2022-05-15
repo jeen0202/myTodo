@@ -2,17 +2,22 @@ extends layout
 
 block content
     div(class="wrapper")
-        section(class="loginForm")
-            h1 Register    
-            form(action='/auth/register_process', method='post')
-                p
-                    input(type='text', name='email', class = 'input', placeholder='email', value='')
-                p
-                    input(type='password', name='password1', class = 'input', placeholder='password', value='')
-                p
-                    input(type='password', name='password2', class = 'input', placeholder='password', value='')
-                p
-                    input(type='test', name='displayName', class = 'input', placeholder='display name', value='')
-                p
-                    input(type='submit', class='button', value='Register')    
-        
+        div.loginForm
+            section.container-sm.mb-3
+                form(action='/auth/register_process', method='post')
+                    h1 Register
+                    p(class="form-floating mb-3")
+                        input(type='text', name='email', class = 'form-control', placeholder='email')
+                        label(for="email") email address
+                    p(class="form-floating mb-3")
+                        input(type='password', name='password1', class = 'form-control', placeholder='password')
+                        label(for="password1") Password
+                    p(class="form-floating mb-3")
+                        input(type='password', name='password2', class = 'form-control', placeholder='password')
+                        label(for='password2') Password Check
+                    p(class="form-floating mb-3")
+                        input(type='test', name='displayName', class = 'form-control', placeholder='display name')
+                        label(for='displayname') DisplayName
+                    p(class= 'mb-3 d-grid gap2')
+                        input(type='submit', class='btn btn-lg btn-outline-primary', value='Register')    
+            

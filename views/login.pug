@@ -6,17 +6,17 @@ block content
             form(action='/auth/login_process', method='post')
                 h1 Login
                 p(class="form-floating mb-3")
-                    input(id="floatingInput" class = 'form-control' type='email', name='email', placeholder='email')
-                    //- label(for="floatingInput") Email address
+                    input(class = 'form-control' type='email', name='email', placeholder="email")
+                    label(for="email" ) Email address
                 p(class='form-floating mb-3')
                     input(class= 'form-control' type='password', name='password', placeholder='password')
-                div(class='mb-3')
-                    button(type='submit', value='login', class='btn btn-block') Login        
+                    label(for="password") Password
+                div(class='mb-3 d-grid gap-2')
+                    button(type='submit', value='login', class='btn btn-lg btn-outline-primary') Login        
             div(class="row justify-content-around")
-                a(href="/auth/google")
+                a(href="/auth/google" class="col")
                     img(src="/images/btn_google_signin_dark_normal_web.png")
-                //- i(class="bi bi-google")
-                a(href="/auth/kakao")
+                a(href="/auth/kakao" class="col")
                     img(src="/images/kakao_login_medium_narrow.png")
             div(class="mb-3")  
                 font(class="form-text") Don&apos;t you have ID? 
