@@ -9,13 +9,19 @@ block content
             div(class='iText') Welcome #{displayName}
             form(action='/todo/add_list' method= 'post')
               p(class='list')
-                label(for='content', class = 'iText') ADD TODO :
+                label(for='content', class = 'iText') Add Task :
                 input(type='text', name ='content')
-                input(type='image',src="/images/plus_icon.png" value = 'ADD', class ="plus_button")
+                |
+                |
+                button(type='submit' value = 'ADD', class ="btn btn-outline-secondary plus_button")
+                  i(class="bi bi-journal-plus")
+                  |
+                  |
+                  font Add
         unless authstatus
             div Welcome to #{title}
 
-      section(class = 'tail')
+      section(class = 'tail row')
         if authstatus      
           each i in toDolists 
             div(class='list')           
@@ -26,12 +32,13 @@ block content
                 form(action="/todo/delete_list", method="post" class ='delete')
                   input(type="hidden", name ="id" value=`${i.id}`)
                   input(type="image",src="/images/x_icon.png" value = "delete" class = 'delete_button')
-          a(href='auth/logout_process') logout
+          a(class='btn btn-outline-secondary' href='auth/logout_process') logout
         unless authstatus
-          a(class='btn-lg btn-outline-primary col-sm-6' href='/auth/login') login
-          |
-          | 
-          a(class='btn-lg btn-outline-primary col-sm-6' href='/auth/register') register
+          a(class='btn btn-outline-secondary col-sm-12' href='/auth/login') 시작하기
+          //- a(class='btn btn-outline-secondary col-sm-6' href='/auth/login') login
+          //- |
+          //- | 
+          //- a(class='btn btn-outline-secondary col-sm-6' href='/auth/register' role="button") register
      
        
    
